@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 class_name Player
 
+signal game_stopped
 
 const GRAVITY_VEC = Vector2(0, 900)
 const FLOOR_NORMAL = Vector2(0, -1)
@@ -16,16 +17,22 @@ var linear_vel = Vector2()
 var shoot_time = 99999 # time since last shot
 
 var anim = ""
+var start_game = false
 
 # cache the sprite here for fast access (we will set scale to flip it often)
 onready var sprite = $Sprite
 # cache bullet for fast access
 var Bullet = preload("res://player/Bullet.tscn")
 
+func stop_game():
+	emit_signal("game_stopped")
 
 func _physics_process(delta):
 	# Increment counters
 	shoot_time += delta
+
+	if Input.is_action_pressed("ui_cancel"):
+		stop_game()
 
 	### MOVEMENT ###
 
