@@ -22,6 +22,12 @@ func _process(delta):
 	else:
 		show_menu()
 
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST:
+		_on_Stage_stage_pause()
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		_on_Stage_stage_pause()
+
 func show_menu():
 	get_node("MainMenu/CanvasLayer/NewGameButton").show()
 	get_node("MainMenu/CanvasLayer/ContinueButton").show()

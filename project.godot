@@ -47,6 +47,7 @@ _global_script_class_icons={
 config/name="Platformer 2D"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+config/quit_on_go_back=false
 target_fps="60"
 
 [autoload]
