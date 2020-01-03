@@ -20,7 +20,7 @@ func _process(delta):
 	if main.do_hide_menu:
 		hide_menu()
 	else:
-		show_menu()
+		show_menu(false)
 
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST:
@@ -28,9 +28,12 @@ func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
 		_on_Stage_stage_pause()
 
-func show_menu():
+func show_menu(show_continue):
 	get_node("MainMenu/CanvasLayer/NewGameTextureButton").show()
-	get_node("MainMenu/CanvasLayer/ContinueGameTextureButton").show()
+	if show_continue:
+		get_node("MainMenu/CanvasLayer/ContinueGameTextureButton").show()
+	else:
+		get_node("MainMenu/CanvasLayer/ContinueGameTextureButton").hide()
 	get_node("MainMenu/CanvasLayer/ExitGameTextureButton").show()
 
 func hide_menu():
@@ -45,7 +48,7 @@ func _on_MainMenu_start_game():
 
 func _on_Stage_stage_pause():
 	print("stage paused")
-	show_menu()
+	show_menu(true)
 	get_node("Stage").get_tree().set_pause(true)
 
 func _on_MainMenu_exit_game():
