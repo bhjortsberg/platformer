@@ -29,21 +29,15 @@ func _notification(what):
 		_on_Stage_stage_pause()
 
 func show_menu():
-	get_node("MainMenu/CanvasLayer/NewGameButton").show()
-	get_node("MainMenu/CanvasLayer/ContinueButton").show()
-	get_node("MainMenu/CanvasLayer/ExitGameButton").show()
-	get_node("MainMenu/CanvasLayer/ExitGame").show()
-	get_node("MainMenu/CanvasLayer/NewGame").show()
-	get_node("MainMenu/CanvasLayer/NewGameLabel").show()
+	get_node("MainMenu/CanvasLayer/NewGameTextureButton").show()
+	get_node("MainMenu/CanvasLayer/ContinueGameTextureButton").show()
+	get_node("MainMenu/CanvasLayer/ExitGameTextureButton").show()
 
 func hide_menu():
-	get_node("MainMenu/CanvasLayer/NewGameButton").hide()
-	get_node("MainMenu/CanvasLayer/ContinueButton").hide()
-	get_node("MainMenu/CanvasLayer/ExitGameButton").hide()
-	get_node("MainMenu/CanvasLayer/ExitGame").hide()
-	get_node("MainMenu/CanvasLayer/NewGame").hide()
-	get_node("MainMenu/CanvasLayer/NewGameLabel").hide()
-		
+	get_node("MainMenu/CanvasLayer/NewGameTextureButton").hide()
+	get_node("MainMenu/CanvasLayer/ContinueGameTextureButton").hide()
+	get_node("MainMenu/CanvasLayer/ExitGameTextureButton").hide()
+
 func _on_MainMenu_start_game():
 	main.do_hide_menu = true
 	get_node("Stage").get_tree().set_pause(false)
