@@ -3,15 +3,15 @@
 [ext_resource path="res://MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/verdanab.ttf" type="DynamicFontData" id=2]
 
-[sub_resource type="Gradient" id=3]
+[sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.5, 1 )
 colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1 )
 
-[sub_resource type="GradientTexture" id=4]
-gradient = SubResource( 3 )
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
 width = 200
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=3]
 size = 26
 font_data = ExtResource( 2 )
 
@@ -33,7 +33,7 @@ margin_top = 171.071
 margin_right = 478.48
 margin_bottom = 241.071
 rect_pivot_offset = Vector2( 100.351, 27.7731 )
-texture_normal = SubResource( 4 )
+texture_normal = SubResource( 2 )
 expand = true
 __meta__ = {
 "_edit_group_": true
@@ -48,7 +48,7 @@ margin_left = -78.0
 margin_top = -34.0
 margin_right = 78.0
 margin_bottom = 34.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 3 )
 text = "New Game"
 align = 1
 valign = 1
@@ -73,7 +73,7 @@ margin_left = -78.0
 margin_top = -34.0
 margin_right = 78.0
 margin_bottom = 34.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 3 )
 text = "Continue"
 align = 1
 valign = 1
@@ -98,7 +98,7 @@ margin_left = -78.0
 margin_top = -34.0
 margin_right = 78.0
 margin_bottom = 34.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 3 )
 text = "Exit"
 align = 1
 valign = 1

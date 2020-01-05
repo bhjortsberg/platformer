@@ -4,8 +4,7 @@ extends Node
 # var a = 2
 # var b = "text"
 
-var do_hide_menu = false
-var first_run = true
+var new_game = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

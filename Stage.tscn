@@ -269,6 +269,7 @@ text = "This is a simple demo on how to make a platformer game with Godot.\"This
 autowrap = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 9 )
 autoplay = true
 [connection signal="game_stopped" from="Player" to="." method="_on_Player_game_stopped"]
