@@ -13,7 +13,7 @@ func _ready():
 	if (Engine.has_singleton("AdMob")):
 		admob = Engine.get_singleton("AdMob")
 		admob.init(false, get_instance_id())
-		admob.loadBanner("ca-app-pub-3940256099942544/6300978111", true)
+		admob.loadBanner("ca-app-pub-3940256099942544/6300978111", false)
 		admob.loadInterstitial("ca-app-pub-3940256099942544/1033173712")
 
 	if main.new_game:
