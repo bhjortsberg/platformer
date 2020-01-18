@@ -6,6 +6,7 @@ extends Node2D
 onready var main = get_node("/root/main_vars")
 
 var admob = null
+var interstitial_loaded = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -64,10 +65,13 @@ func _on_Stage_stage_pause():
 
 func _on_MainMenu_exit_game():
 	main.new_game = false
-	if admob:
+	if admob and interstitial_loaded:
 		admob.showInterstitial()
 	else:
 		get_tree().quit()
+
+func _on_interstitial_loaded():
+	interstitial_loaded = true
 
 func _on_interstitial_close():
 	print("Interstitial closed")
