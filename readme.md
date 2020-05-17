@@ -11,6 +11,8 @@ game engine and the [Godot AdMob module](https://github.com/kloder-games/godot-a
 to create an Android game with [AdMob](https://apps.admob.com/v2/home) support
 for ads.
 
+This is a description on how you can [use Google AdMob ads in Godot](https://hjortsberg.org/notes/Support-Google-AdMob-ads-in-Godot-Android-games.html)
+
 ## Android screenshot
 
 ![alt attribute](/assets/Screenshot_20200105-233729.jpg)
